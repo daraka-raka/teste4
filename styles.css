@@ -1,0 +1,517 @@
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff0000;
+    --secondary-color: #ffd700;
+    --dark-color: #1a1a1a;
+    --light-color: #ffffff;
+    --grey-color: #f8f9fa;
+    --text-color: #333333;
+    --success-color: #28a745;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--grey-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Banner de Urgência */
+.urgency-banner {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.countdown, .limited-spots {
+    font-size: 1.1em;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--dark-color), #333);
+    color: var(--light-color);
+    text-align: center;
+    padding: 100px 20px 50px;
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 900;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--secondary-color);
+}
+
+/* Seções Gerais */
+section {
+    padding: 70px 0;
+}
+
+h3 {
+    font-size: 2.2em;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+h3:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 15px auto 0;
+}
+
+/* Vídeo Section */
+.video-section {
+    background-color: var(--dark-color);
+    padding: 60px 0;
+}
+
+.video-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container img {
+    width: 100%;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.video-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.play-button span {
+    color: var(--light-color);
+    font-size: 2em;
+}
+
+.video-overlay:hover .play-button {
+    transform: scale(1.1);
+}
+
+/* Problema Section */
+.problem-section {
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.problem-section h3 {
+    color: var(--primary-color);
+}
+
+.problem-section p {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.emphasized {
+    font-size: 1.8em !important;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 20px;
+}
+
+/* Oferta Section */
+.offer-section {
+    background-color: var(--grey-color);
+}
+
+.check-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.check-list li:before {
+    content: '✓';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Benefícios Section */
+.benefits-section {
+    background-color: var(--light-color);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background-color: var(--grey-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.benefit-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.benefit-card h4 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.benefit-card p {
+    color: #666;
+}
+
+/* Depoimentos Section */
+.testimonials-section {
+    background-color: var(--grey-color);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: var(--light-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.student-name {
+    color: #666;
+    font-weight: bold;
+}
+
+/* Preço Section */
+.pricing-section {
+    background: linear-gradient(135deg, var(--dark-color), #333);
+    color: var(--light-color);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.pricing-section h3 {
+    color: var(--light-color);
+}
+
+.pricing-section h3:after {
+    background: var(--secondary-color);
+}
+
+.price-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.5em;
+}
+
+.discount-price {
+    font-size: 3em;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.limited-offer {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* CTA Section */
+.cta-main {
+    margin-top: 40px;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(255,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #cc0000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255,0,0,0.4);
+}
+
+.cta-subtext {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+/* Garantia Section */
+.guarantee-section {
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.guarantee-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.guarantee-details {
+    max-width: 800px;
+    margin: 20px auto 0;
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--grey-color);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: var(--light-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.faq-item h4 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.faq-item p {
+    color: #666;
+}
+
+/* Final CTA */
+.final-cta {
+    background: linear-gradient(135deg, var(--primary-color), #cc0000);
+    color: var(--light-color);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.final-cta h3 {
+    color: var(--light-color);
+}
+
+.final-cta h3:after {
+    background: var(--light-color);
+}
+
+.final-cta p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.cta-button-final {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.cta-button-final:hover {
+    background-color: #e6c200;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: #999;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9em;
+}
+
+.disclaimer {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+/* Animações */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1.8em;
+    }
+    
+    .benefits-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-button, .cta-button-final {
+        width: 90%;
+        max-width: 300px;
+        font-size: 1.3em;
+        padding: 15px 30px;
+    }
+    
+    .urgency-banner {
+        flex-direction: column;
+        padding: 5px;
+    }
+    
+    .countdown, .limited-spots {
+        font-size: 0.9em;
+    }
+    
+    .price-tag .discount-price {
+        font-size: 2.5em;
+    }
+} 
